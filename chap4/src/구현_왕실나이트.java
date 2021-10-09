@@ -1,4 +1,3 @@
-import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 public class 구현_왕실나이트 {
     public static void main(String[] args){

@@ -1,4 +1,3 @@
-import java.util.Collections;
 import java.util.Scanner;
 import java.util.Arrays;
 public class 그리디_큰수의법칙 {
