@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class 구현_개임개발 {
+public class 구현_게임개발 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         //맵 생성
