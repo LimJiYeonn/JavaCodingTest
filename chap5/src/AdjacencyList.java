@@ -3,7 +3,7 @@ class Node {
     private int index; //인덱스
     private int distance; //거리
 
-    public Node(int index, int distance) {
+    public Node(int index, int distance) {//생성자
         this.index = index;
         this.distance = distance;
     }
