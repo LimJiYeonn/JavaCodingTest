@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -39,14 +40,14 @@ class Fruit implements Comparable<Fruit>{
 public class SortKey {
 
     public static void main(String[] args) {
-        ArrayList<Fruit> fruits = new ArrayList<>();
+        List<Fruit> fruits = new ArrayList<Fruit>();
 
         fruits.add(new Fruit("바나나", 2));
         fruits.add(new Fruit("사과", 5));
         fruits.add(new Fruit("당근", 3));
 
 
-//        Collectors.sort(fruits); //왜 sort 안돼??? 하 참나
+        Collections.sort(fruits); //왜 sort 안돼??? 하 참나
 
         for(int i = 0; i < fruits.size(); i++){
             System.out.println( "(" + fruits.get(i).getName() + " , " + fruits.get(i).getScore() + ")");
