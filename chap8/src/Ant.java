@@ -13,7 +13,7 @@ public class Ant {
         }
 
         d[0] = arr[0];
-        d[1] = Math.max(arr[0], arr[1]);
+        d[1] = Math.max(arr[0], arr[1]);//첫번째와 두번째중 큰거
         for(int i = 2; i < n; i++){
             d[i] = Math.max(d[i-1], d[i-2] + arr[i]);
         }
