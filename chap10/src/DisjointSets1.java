@@ -1,5 +1,5 @@
 import java.util.*;
-public class DisjointSets {
+public class DisjointSets1 {
     public static int v, e;  // 노드의 개수(V)와 간선(Union 연산)의 개수(E), 노드의 개수는 최대 100,000개라고 가정
     public static int[] parent = new int[100001]; // 부모 테이블 초기화하기
 
@@ -30,7 +30,7 @@ public class DisjointSets {
         }
 
         // Union 연산을 각각 수행
-        for (int i = 0; i < e; i++) {
+        for (int i = 0; i <= e; i++) {
             int a = sc.nextInt();
             int b = sc.nextInt();
             unionParent(a, b);
