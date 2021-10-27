@@ -1,13 +1,13 @@
 import java.util.*;
-public class DisjointSetsImprove {
+public class DisjointCycle {
     public static int v, e;
-    public static int[] parent = new int[100001]; // 부모 테이블 초기화하기
+    public static int[] parent = new int[100001];
 
     // 특정 원소가 속한 집합을 찾기
     public static int findParent(int x) {
         // 루트 노드가 아니라면, 루트 노드를 찾을 때까지 재귀적으로 호출
         if (x == parent[x]) return x;
-        return parent[x] = findParent(parent[x]); ///경로압축기법 : 루트 노드를 저장
+        return parent[x] = findParent(parent[x]);
     }
 
     // 두 원소가 속한 집합을 합치기
@@ -29,25 +29,27 @@ public class DisjointSetsImprove {
             parent[i] = i;
         }
 
-        // Union 연산을 각각 수행
+        boolean cycle = false; // 사이클 발생 여부
+
         for (int i = 0; i < e; i++) {
             int a = sc.nextInt();
             int b = sc.nextInt();
-            unionParent(a, b);
+            // 사이클이 발생한 경우 종료
+            if (findParent(a) == findParent(b)) {
+                cycle = true;
+                break;
+            }
+            // 사이클이 발생하지 않았다면 합집합(Union) 연산 수행
+            else {
+                unionParent(a, b);
+            }
         }
 
-        // 각 원소가 속한 집합 출력하기
-        System.out.print("각 원소가 속한 집합: ");
-        for (int i = 1; i <= v; i++) {
-            System.out.print(findParent(i) + " ");
+        if (cycle) {
+            System.out.println("사이클이 발생했습니다.");
         }
-        System.out.println();
-
-        // 부모 테이블 내용 출력하기
-        System.out.print("부모 테이블: ");
-        for (int i = 1; i <= v; i++) {
-            System.out.print(parent[i] + " ");
+        else {
+            System.out.println("사이클이 발생하지 않았습니다.");
         }
-        System.out.println();
     }
 }
