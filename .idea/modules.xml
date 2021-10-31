@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaCodingTest.iml" filepath="$PROJECT_DIR$/.idea/JavaCodingTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/chap10/chap10.iml" filepath="$PROJECT_DIR$/chap10/chap10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chap11/chap11.iml" filepath="$PROJECT_DIR$/chap11/chap11.iml" />
       <module fileurl="file://$PROJECT_DIR$/chap3/chap3.iml" filepath="$PROJECT_DIR$/chap3/chap3.iml" />
       <module fileurl="file://$PROJECT_DIR$/chap4/chap4.iml" filepath="$PROJECT_DIR$/chap4/chap4.iml" />
       <module fileurl="file://$PROJECT_DIR$/chap5/chap5.iml" filepath="$PROJECT_DIR$/chap5/chap5.iml" />
