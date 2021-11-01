@@ -1,14 +1,13 @@
 import java.util.*;
 
-class Edge implements Comparable<Edge> {
-
+class Edge4 implements Comparable<Edge4> {
 
     private int distance;
     private int nodeA;
     private int nodeB;
 
-    public Edge(int distance, int nodeA, int nodeB) {
-        this.distance = distance;
+    public Edge4(int distance4, int nodeA, int nodeB) {
+        this.distance = distance4;
         this.nodeA = nodeA;
         this.nodeB = nodeB;
     }
@@ -26,23 +25,26 @@ class Edge implements Comparable<Edge> {
     }
 
     // 거리(비용)가 짧은 것이 높은 우선순위를 가지도록 설정
-    @Override
     public int compareTo(Edge other) {
-        if (this.distance < other.distance) {
+        if (this.distance < other.distance) {//////////왜 오류나지?
             return -1;
         }
         return 1;
     }
 }
 
-public class MSTKruskal1 {//최소신장트리 알고리즘을 크루스칼 알고리즘으로 구현
+public class CityDivision2 {
+
+    // 노드의 개수(V)와 간선(Union 연산)의 개수(E)
     public static int v, e;
-    public static int[] parent = new int[100001]; // 부모 테이블 초기화하기
-    public static ArrayList<Edge> edges = new ArrayList<>(); // 모든 간선을 담을 리스트
-    public static int result = 0; //최종 비용을 담을 변수
+    public static int[] parent = new int[100001]; // 부모 테이블 초기화
+    // 모든 간선을 담을 리스트와, 최종 비용을 담을 변수
+    public static ArrayList<Edge4> edges = new ArrayList<>();
+    public static int result = 0;
 
     // 특정 원소가 속한 집합을 찾기
     public static int findParent(int x) {
+        // 루트 노드가 아니라면, 루트 노드를 찾을 때까지 재귀적으로 호출
         if (x == parent[x]) return x;
         return parent[x] = findParent(parent[x]);
     }
@@ -57,6 +59,7 @@ public class MSTKruskal1 {//최소신장트리 알고리즘을 크루스칼 알�
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
         v = sc.nextInt();
         e = sc.nextInt();
 
@@ -70,11 +73,13 @@ public class MSTKruskal1 {//최소신장트리 알고리즘을 크루스칼 알�
             int a = sc.nextInt();
             int b = sc.nextInt();
             int cost = sc.nextInt();
-            edges.add(new Edge(cost, a, b));
+            // 비용순으로 정렬하기 위해서 튜플의 첫 번째 원소를 비용으로 설정
+            edges.add(new Edge4(cost, a, b));
         }
 
         // 간선을 비용순으로 정렬
         Collections.sort(edges);
+        int last = 0; // 최소 신장 트리에 포함되는 간선 중에서 가장 비용이 큰 간선
 
         // 간선을 하나씩 확인하며
         for (int i = 0; i < edges.size(); i++) {
@@ -85,9 +90,10 @@ public class MSTKruskal1 {//최소신장트리 알고리즘을 크루스칼 알�
             if (findParent(a) != findParent(b)) {
                 unionParent(a, b);
                 result += cost;
+                last = cost;
             }
         }
 
-        System.out.println(result);
+        System.out.println(result - last);
     }
 }
