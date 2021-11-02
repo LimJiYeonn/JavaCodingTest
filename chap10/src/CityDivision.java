@@ -2,7 +2,7 @@ import java.util.*;
 
 class Edge3 implements Comparable<Edge3>{
 
-    private int distance; //static 제외해야함!!! 계속 static 붙여서 오류났었다. 
+    private int distance; //static 제외해야함!!! 계속 static 붙여서 오류났었다.
     private int nodeA;
     private int nodeB;
 
