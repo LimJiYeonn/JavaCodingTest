@@ -25,8 +25,8 @@ class Edge4 implements Comparable<Edge4> {
     }
 
     // 거리(비용)가 짧은 것이 높은 우선순위를 가지도록 설정
-    public int compareTo(Edge other) {
-        if (this.distance < other.distance) {//////////왜 오류나지?
+    public int compareTo(Edge4 other) {    //Edge -> Edge4로 변경했어야 함
+        if (this.distance < other.distance) {
             return -1;
         }
         return 1;

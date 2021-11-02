@@ -1,12 +1,10 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
+import java.util.*;
 
 class Edge3 implements Comparable<Edge3>{
 
-    private static int distance;
-    private static int nodeA;
-    private static int nodeB;
+    private int distance; //static 제외해야함!!! 계속 static 붙여서 오류났었다. 
+    private int nodeA;
+    private int nodeB;
 
     public Edge3(int distance, int nodeA, int nodeB) {
         this.distance = distance;
@@ -14,15 +12,16 @@ class Edge3 implements Comparable<Edge3>{
         this.nodeB = nodeB;
     }
 
-    public static int getDistance() {
+
+    public int getDistance() {
         return distance;
     }
 
-    public static int getNodeA() {
+    public int getNodeA() {
         return nodeA;
     }
 
-    public static int getNodeB() {
+    public int getNodeB() {
         return nodeB;
     }
 
@@ -56,6 +55,7 @@ public class CityDivision {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
         m = sc.nextInt();
+
         for(int i = 1; i <= n; i++){//
             parent[i] = i;
         }
@@ -77,7 +77,7 @@ public class CityDivision {
             if(findParent(a) != findParent(b)) {
                 unionParent(a, b);
                 result += cost;
-                System.out.println( i + " 번째의 결과는 " + result);
+//                System.out.println( i + " 번째의 결과는 " + result);
                 //결과가 0번째 결과는 4 나오고 끝.........
                 last = cost;
             }
