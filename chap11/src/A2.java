@@ -1,5 +1,5 @@
 import java.util.*;
-public class One2 {
+public class A2 {
     public static int n;
     public static ArrayList<Integer> arrayList = new ArrayList<>();
 

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Three1 {
+public class C {
 
     public static String str;
     public static int count0 = 0; //전부 0으로 바꾸는 경우
