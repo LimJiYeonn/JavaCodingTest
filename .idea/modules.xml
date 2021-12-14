@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/chap7/chap7.iml" filepath="$PROJECT_DIR$/chap7/chap7.iml" />
       <module fileurl="file://$PROJECT_DIR$/chap8/chap8.iml" filepath="$PROJECT_DIR$/chap8/chap8.iml" />
       <module fileurl="file://$PROJECT_DIR$/chap9/chap9.iml" filepath="$PROJECT_DIR$/chap9/chap9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/백준/백준.iml" filepath="$PROJECT_DIR$/백준/백준.iml" />
       <module fileurl="file://$PROJECT_DIR$/프로그래머스/프로그래머스.iml" filepath="$PROJECT_DIR$/프로그래머스/프로그래머스.iml" />
     </modules>
   </component>
