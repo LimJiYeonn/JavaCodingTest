@@ -8,12 +8,7 @@ public class Q10818 {
         for(int i = 0; i < n; i++){
             num[i] = sc.nextInt();
         }
-        int big=-1, small=99999;
-        for(int i = 0; i < n; i++){
-            if(num[i] > big) big = num[i];
-            if(num[i] < small) small = num[i];
-        }
-//        Arrays.sort(num);
-        System.out.println(small + " "+ big);
+        Arrays.sort(num);
+        System.out.println(num[0] + " "+ num[n-1]);
     }
 }
