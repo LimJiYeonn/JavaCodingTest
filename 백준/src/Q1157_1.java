@@ -9,13 +9,13 @@ public class Q1157_1 {
         for(int i = 0 ; i < word.length(); i++) {
             word2[i] = word.charAt(i);
         }
-        Arrays.sort(word2);
-        int cnt = 0;
+        Arrays.sort(word2); //문자 나눈다음 정렬
+        int cnt = 0; 
         int result = 0;
-        char c;
+        char c = 'a';
         boolean same = false;
         for(int i = 0 ; i < word.length(); i++) {
-            if(word2[i] == word2[i+1]) {
+            if(word2[i] == word2[i+1]) { //연속되는 문자면 cnt++
                 cnt++;
 
             }
@@ -34,7 +34,7 @@ public class Q1157_1 {
         }
 
         if(same) System.out.println("?");
-        else System.out.println();
+        else System.out.println(c);
 
 
 
