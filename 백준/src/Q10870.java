@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Q10870 {
+public class Q10870 { //피보나치 수 5
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
