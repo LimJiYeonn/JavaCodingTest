@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.StringTokenizer;
-
+//나이순 정렬, 좌표 압축
 class Member implements Comparable{ //java 226p 보기
 
     int age;
@@ -30,6 +30,7 @@ public class Q10814 {
         int age = 0;
         String name = "";
 
+        //입력
         StringTokenizer st;
         for(int i = 0; i < n; i++){
             st = new StringTokenizer(br.readLine(), " ");
