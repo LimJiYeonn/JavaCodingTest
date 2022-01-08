@@ -2,31 +2,22 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-//import java.util.Collections;
-//import java.util.Comparator;
+import java.util.Collections;
 import java.util.StringTokenizer;
 
-class Member implements Comparable{
+class Member implements Comparable{ //java 226p 보기
 
     int age;
     String name;
 
-    public Member(int age, String name) {
+    Member(int age, String name) {
         this.age = age;
         this.name = name;
     }
 
+    @Override
     public int compareTo(Object o) {
-        Member m = (Member)o;
-        if(this.age > m.age) return 1;
-        else if(this.age < m.age) return -1;
-        else return 0;
-
-        //Collecctions 인터페이스와 compare 추상상메서드 사용시
-//       return o2.age - o1.age;
-//        if(o1.age > o2.age) return 1;
-//        else if(o1.age < o2.age) return -1;
-//        else return 0;
+        return this.age - ((Member)o).age;
     }
 }
 
@@ -47,9 +38,10 @@ public class Q10814 {
             list.add(new Member(age, name));
         }
 
+        Collections.sort(list);
 
         for(int i = 0; i < n; i++){
-            System.out.println(list.get(i).age + "  " + list.get(i).name);
+            System.out.println(list.get(i).age + " " + list.get(i).name);
         }
 
     }
