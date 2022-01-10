@@ -34,7 +34,7 @@ public class Q1021 { //회전하는 큐 -> 덱으로 구현
             if(target_idx <= half_idx){ //찾는게 앞에 있는 경우 뒤로 보내기
                 for(int j = 0; j < target_idx; j++){
                     int temp = deque.pollFirst();
-                    deque.offerLast(temp);
+                    deque.offerLast(temp); // =offer(temp)
                     cnt++;
                 }
             }else{ //찾는게 뒤에 있을 경우 앞으로 보내기
